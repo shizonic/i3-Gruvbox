@@ -1,0 +1,12 @@
+#!/bin/bash
+
+device=`xinput list|grep Focal|grep id=|cut -f 2|cut -f 2 -d =`
+state=`xinput list-props "$device" | grep "Device Enabled" | grep -o "[01]$"`
+
+if [ $state == '1' ];then
+  xinput --disable $device
+  notify-send -i /usr/share/icons/Paper/48x48/notifications/notification-touchpad-disabled-symbolic.svg "Disabled" -t 100
+else
+  xinput --enable $device
+  notify-send -i /usr/share/icons/Paper/48x48/notifications/notification-input-touchpad-symbolic.svg "Enabled" -t 100
+fi
