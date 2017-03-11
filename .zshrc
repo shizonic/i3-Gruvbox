@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo)
+plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,9 +85,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias remove-orphans='sudo pacman -Rs $(pacman -Qtdq)'
-
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias battery-count='cat /sys/class/power_supply/BAT*/cycle_count'
-alias xflux-2700K='xflux -l 45.546693 -g 13.732402 -k 2700'
 alias update-packages='sudo pacman -Syu'
 alias weka='java -jar /home/matjaz/Downloads/weka-3-8-1/weka.jar'
+alias neofetchTS='neofetch --w3m /home/matjaz/.config/taylor2.jpg --size 33%'
+alias edit='subl3'

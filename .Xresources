@@ -15,10 +15,4 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background: #2b2c2v
-XTerm*foreground: #e2e2e2
-XTerm*pointerColor: #16A085
-XTerm*faceName: Iosevka
-XTerm*faceSize: 10
-
-urxvt*font: xft:Iosevka:size=10:antialias=true
+urxvt*font: xft:Fantasque Sans Mono:size=10:antialias=true
