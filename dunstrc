@@ -1,5 +1,5 @@
 [global]
-    font = Fantasque Sans Mono 10
+    font = Inconsolata for Powerline 10
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -65,7 +65,7 @@
     # the top and down respectevly.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "0x4-9+30"
+    geometry = "0x4-6+30"
    
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -151,8 +151,8 @@
     icon_folders = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
 
 [frame]
-    width = 2
-    color = "#eeffff"
+    width = 3
+    color = "#d79921"
 [shortcuts]
 
     # Shortcuts are specified as [modifier+][modifier+]...key
@@ -178,18 +178,18 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#282a2e"
-    foreground = "#EEFFFF"
+    background = "#111313"
+    foreground = "#f9f5d7"
     timeout = 10
 
 [urgency_normal]
-    background = "#282a2e"
-    foreground = "#EEFFFF"
+    background = "#111313"
+    foreground = "#f9f5d7"
     timeout = 10
 
 [urgency_critical]
-    background = "#282a2e"
-    foreground = "#db3f3f"
+    background = "#111313"
+    foreground = "#f9f5d7"
     timeout = 0
 
 
@@ -261,12 +261,12 @@
 #    appname = JDownloader
 #    category = JD
 #    background = "#FFA247"
-#    foreground = "#EEFFFF"
+#    foreground = "#f9f5d7"
 #
 #[newsbeuter]
 #    summary = *Feeds*
 #    background = "#A8EB41"
-#    foreground = "#EEFFFF"
+#    foreground = "#f9f5d7"
 #
 [irc]
         appname = weechat
@@ -278,13 +278,13 @@
      appname = weechat
      category = weechat.HL
      background = "#FF5C47"
-     foreground = "#EEFFFF"
+     foreground = "#f9f5d7"
 #
 [weechat pn]
      appname = weechat
      category = weechat.PM
      background = "#D53B84"
-     foreground = "#EEFFFF"
+     foreground = "#f9f5d7"
 #
 #[CMUS]
 #    appname = CMUS

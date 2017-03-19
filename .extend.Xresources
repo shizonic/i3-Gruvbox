@@ -1,45 +1,45 @@
-*cursorColor:           #eeffff
-*pointerColorBackground:#212121
-*pointerColorForeground:#eeffff
+*cursorColor:           #f9f5d7
+*pointerColorBackground:#1d2021
+*pointerColorForeground:#f9f5d7
 
-! black
-*.color0:       #1b1b1b
-*.color8:       #1b1b1b
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
 
-! red
-*.color1:       #ff5370
-*.color9:       #ff5370
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
 
-! green
-*.color2:       #c3e88d
-*.color10:      #c3e88d
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
 
-! yellow
-*.color3:       #ffcb6b
-*.color11:      #ffcb6b
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
 
-! blue
-*.color4:       #82aaff
-*.color12:      #82aaff
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
 
-! magenta
-*.color5:       #bb80b3
-*.color13:      #bb80b3
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
 
-! cyan
-*.color6:       #89ddff
-*.color14:      #89ddff
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
 
-! white
-*.color7:       #eeffff
-*.color15:      #eeffff
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
 
 Xcursor.theme: Paper
 Xcursor.size:  0
 
 URxvt.depth: 32
-URxvt.background: 		      		  #212121
-URxvt.foreground:		      		  #eeffff
+URxvt.background: 		      		  #1d2021
+URxvt.foreground:		      		  #f9f5d7
 URxvt*scrollBar:                      false
 URxvt*mouseWheelScrollPage:           false
 URxvt*cursorBlink:                    true

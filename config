@@ -1,6 +1,3 @@
-# i3 config file (v4)
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
-
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
@@ -10,7 +7,7 @@ set $mod Mod4
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 #new_window pixel 2
 #new_float pixel 2
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 
 # Hide borders
 hide_edge_borders none
@@ -22,7 +19,7 @@ bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:Fantasque Sans Mono 10
+font xft: Inconsolata for Powerline 10
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -34,9 +31,9 @@ bindsym $mod+Return exec --no-startup-id terminal
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency -h 21
-#bindsym $mod+d exec --no-startup-id rofi -show run rofi -config /home/matjaz/.config/rofi.conf -width 500px -lines 7
-
+#bindsym $mod+d exec --no-startup-id dmenu_recency -h 21
+#bindsym $mod+d exec --no-startup-id rofi -show run -config /home/matjaz/.config/rofi.conf -lines 5 -eh 2 -width 100 -padding 800 -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd"
+bindsym $mod+d exec --no-startup-id rofi -show run -config /home/matjaz/.config/rofi.conf -lines 5 -width 20 -separator-style "none" -hide-bar
 # launch categorized menu
 bindsym $mod+y exec --no-startup-id morc_menu
 
@@ -140,11 +137,11 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+Tab move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+bindsym $mod+Tab scratchpad show
 
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
@@ -154,16 +151,27 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2: 
-set $ws1 "1:  Internet"
-set $ws2 "2:  Terminal"
-set $ws3 "3:  Editor"
-set $ws4 "4:  Files"
-set $ws5 "5:  Other"
-set $ws6 "6:  Other"
-set $ws7 "7:  Other"
-set $ws8 "8:  Mail"
-set $ws9 "9:  Music"
-set $ws10 "10:  Chat"
+#set $ws1 "1:  Internet"
+#set $ws2 "2:  Terminal"
+#set $ws3 "3:  Editor"
+#set $ws4 "4:  Files"
+#set $ws5 "5:  Other"
+#set $ws6 "6:  Other"
+#set $ws7 "7:  Other"
+#set $ws8 "8:  Mail"
+#set $ws9 "9:  Music"
+#set $ws10 "10:  Chat"
+
+set $ws1 "1:  "
+set $ws2 "2:  "
+set $ws3 "3:  "
+set $ws4 "4:  "
+set $ws5 "5:  "
+set $ws6 "6:  "
+set $ws7 "7:  "
+set $ws8 "8:  "
+set $ws9 "9:  "
+set $ws10 "10:  "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -204,7 +212,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 # Open applications on specific workspaces
 for_window [class="Messenger for Desktop"] move to workspace $ws10
 for_window [class="Subl3"] move to workspace $ws3
-for_window [class="Chromium"] move to workspace $ws1
+for_window [class="Google-chrome"] move to workspace $ws1
 for_window [class="Evolution"] move to workspace $ws8
 for_window [class="Spotify"] move to workspace $ws9
 for_window [class="Thunar"] move container to workspace $ws4
@@ -214,20 +222,20 @@ for_window [class="Thunar"] move container to workspace $ws4
 #for_window [class="Calamares"] floating enable border pixel 2
 #for_window [class="Clipgrab"] floating enable pixel 2
 #for_window [title="File Transfer*"] floating enable pixel 2
-#for_window [class="Galculator"] floating enable border pixel 2
+for_window [class="Galculator"] floating enable border pixel 2
 #for_window [class="GParted"] floating enable border pixel 2
 #for_window [title="i3_help"] floating enable sticky enable border pixel 2
-#for_window [class="Lightdm-gtk-greeter-settings"] floating enable pixel 2
-#for_window [class="Lxappearance"] floating enable sticky enable border pixel 2
-#for_window [class="Manjaro Settings Manager"] floating enable border pixel 2
-#for_window [class="Manjaro Welcome"] floating enable pixel 2
+for_window [class="Lightdm-gtk-greeter-settings"] floating enable pixel 2
+for_window [class="Lxappearance"] floating enable sticky enable border pixel 2
+for_window [class="Manjaro Settings Manager"] floating enable border pixel 2
+for_window [class="Manjaro Welcome"] floating enable pixel 2
 #for_window [title="MuseScore: Play Panel"] floating enable pixel 2
-#for_window [class="Nitrogen"] floating enable sticky enable border pixel 2
+for_window [class="Nitrogen"] floating enable sticky enable border pixel 2
 #for_window [class="Oblogout"] fullscreen enable pixel 2
 #for_window [class="octopi"] floating enable pixel 2
 #for_window [class="Pamac-manager"] floating enable pixel 2
-#for_window [class="Pavucontrol"] floating enable pixel 2
-#for_window [class="qt5ct"] floating enable sticky enable border pixel 2
+for_window [class="Pavucontrol"] floating enable pixel 2
+for_window [class="qt5ct"] floating enable sticky enable border pixel 2
 #for_window [class="Qtconfig-qt4"] floating enable sticky enable border pixel 2
 #for_window [class="Simple-scan"] floating enable border pixel 2
 #for_window [class="(?i)System-config-printer.py"] floating enable border pixel 2
@@ -237,7 +245,7 @@ for_window [class="Thunar"] move container to workspace $ws4
 #for_window [class="Xfburn"] floating enable pixel 2
 
 # switch to workspace with urgent window automatically
-#for_window [urgent=latest] focus
+for_window [urgent=latest] focus
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -246,7 +254,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
 bindsym $mod+Shift+Control+e mode "$mode_system"
@@ -273,16 +281,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 20 px or 20 ppt
-        bindsym j resize grow height 20 px or 20 ppt
-        bindsym k resize shrink height 20 px or 20 ppt
-        bindsym l resize grow width 20 px or 20 ppt
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 20 px or 20 ppt
-        bindsym Down resize grow height 20 px or 20 ppt
-        bindsym Up resize shrink height 20 px or 20 ppt
-        bindsym Right resize grow width 20 px or 20 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # exit resize mode: Enter or Escape
         bindsym Return mode "default"
@@ -298,7 +306,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id xfce4-power-manager
 exec_always --no-startup-id fix_xcursor
-exec --no-startup-id chromium
+exec --no-startup-id google-chrome-stable
 exec --no-startup-id spotify-wrapper.sh
 exec --no-startup-id messengerfordesktop
 exec --no-startup-id subl3
@@ -306,42 +314,42 @@ exec --no-startup-id redshift
 exec --no-startup-id evolution
 exec --no-startup-id thunar
 exec --no-startup-id unclutter --ignore-scrolling --jitter 10 -b
+exec_always --no-startup-id /home/matjaz/.config/polybar/launch.sh
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	status_command i3status
-	position top
-
-	font xft: Fantasque Sans Mono 10
-	tray_padding 5
-	# strip_workspace_numbers yes
-
-	colors {
-		set $background #282a2e
-		set $color1 	#eeffff
-		set $color2 	#666666
-
-		background $background
-        statusline $color1
-		separator  $color2
-
+#bar {
+#	status_command i3status
+#	position top
+#
+#	font xft: Inconsolata for Powerline 10
+#	tray_padding 5
+#	# strip_workspace_numbers yes
+#
+#	colors {
+#		set $background #282a2e
+#		set $color1 	#eeffff
+#		set $color2 	#4f5253
+#
+#		background $background
+#        statusline $color1
+#		separator  $color2
+#
 #                          border      backgr      text
-		focused_workspace  $background $background $color1
-		active_workspace   $background $background $color2
-		inactive_workspace $background $background $color2
-		urgent_workspace   $background $background #db3f3f
-	}
-}
-
+#		focused_workspace  $background $background $color1
+#		active_workspace   $background $background $color2
+#		inactive_workspace $background $background $color2
+#		urgent_workspace   $background $background #db3f3f
+#	}
+#}
 # hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
+#bindsym $mod+m bar mode toggle
 
 # Theme colors
 
-set $bg-color 	         #eeffff
-set $inactive-bg-color   #444444
-set $text-color          #444444
-set $inactive-text-color #eeffff
+set $bg-color 	         #d79921
+set $inactive-bg-color   #454849
+set $text-color          #454849
+set $inactive-text-color #f9f5d7
 set $urgent-bg-color     #db3f3f
 
 # window colors
@@ -356,8 +364,8 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 #############################
 
 # Set inner/outer gaps
-gaps inner 10
-gaps outer -9
+gaps inner 15
+gaps outer -8
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -365,11 +373,11 @@ gaps outer -9
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+#smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+#smart_borders on
 
 # Gaps Toggle
 set $mode_gaps_toggle Toggle gaps: (1) on (2) off
@@ -381,8 +389,6 @@ mode "$mode_gaps_toggle" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
-
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
