@@ -1,3 +1,1 @@
-# My-DOTFILES
-
-My i3 dotfiles
+i3-Gruvbox dot files for Manjaro Linux
