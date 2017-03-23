@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#/etc/bin/blurlock
+import -window root /tmp/screenshot.png
+convert -scale 10% -scale 1000% /tmp/screenshot.png /tmp/screenshotblur.png
+rm /tmp/screenshot.png
+i3lock -i /tmp/screenshotblur.png
